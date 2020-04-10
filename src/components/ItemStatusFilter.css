@@ -1,0 +1,15 @@
+.all, .active, .done {
+    border: 1px solid #454545;
+    color: #F5F5DC;
+    font-family: Caveat, CormorantInfant, SourceSansPro;
+    font-size: 20px;
+}
+
+.done {
+    margin-right: 0;
+}
+
+.all:hover, .active:hover, .done:hover {
+    background: #A9CCE3;
+    color: #2C2C2C;
+}

@@ -1,0 +1,47 @@
+.list {
+    width: 100%;
+}
+
+.list-item {
+    display: flex;
+    list-style: none;
+    height: 50px;
+    margin: 5px 0;
+    border: 1px solid #454545;
+}
+
+.block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-input {
+    width: 60px;
+    height: 30px;
+    margin-right: 5px;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.trash {
+    border: 1px solid #F5B7B1;
+    color: #F5B7B1;
+}
+
+.trash:hover {
+    background: #F5B7B1;
+    color: #2C2C2C;
+}
+
+.exclamation {
+    border: 1px solid #A9DFBF;
+    color: #A9DFBF;
+}
+
+.exclamation:hover {
+    background: #A9DFBF;
+    color: #2C2C2C;
+}
