@@ -17,6 +17,20 @@
     width: 100%;
 }
 
+.done {
+    text-decoration: line-through;
+}
+
+.important {
+    color: #FAD7A0;
+    font-weight: bold;
+}
+
+.item-text {
+    cursor: pointer;
+    padding-left: 10px;
+}
+
 .btn-input {
     width: 60px;
     height: 30px;

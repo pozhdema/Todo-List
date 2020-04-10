@@ -1,13 +1,13 @@
 .groop-search {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
 }
 
 input {
-    width: 56%;
+    width: 250px;
     height: 30px;
-    margin-right: 12px;
     padding-left: 10px;
     font-family: Caveat, CormorantInfant, SourceSansPro;
     font-size: 20px;
