@@ -29,7 +29,7 @@ body {
 .to-do {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -49,4 +49,30 @@ h2 {
     color: #454545;
     font-weight: 100;
     font-size: 20px;
+}
+
+@media screen and (min-width: 576px) {
+    .to-do {
+        width: 65%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .to-do {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .to-do {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .to-do {
+        width: 30%;
+    }
 }

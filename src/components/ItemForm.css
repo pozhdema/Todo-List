@@ -1,23 +1,39 @@
 .item-add-form {
     display: flex;
-    justify-content: space-between;
-}
-
-.input-text {
-    width: 350px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .add {
-    width: 100px;
+    width: 185px;
     height: 30px;
     border: 1px solid #454545;
     color: #F5F5DC;
     font-family: Caveat, CormorantInfant, SourceSansPro;
     font-size: 20px;
     margin-right: 0;
+    margin-left: 5px;
 }
 
 .add:hover {
     background: #D5D8DC;
     color: #2C2C2C;
+}
+
+@media screen and (min-width: 576px) {
+    .item-add-form {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .input-text {
+        width: 90%;
+    }
+
+    .add {
+        width: 100px;
+    }
 }

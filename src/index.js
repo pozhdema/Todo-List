@@ -1,10 +1,12 @@
 import React, {Component} from "react";
 import ReactDom from 'react-dom'
+
 import AppHeader from "./components/AppHeader";
 import SearchPanel from "./components/SearchPanel";
 import TodoList from "./components/TodoList";
 import ItemStatusFilter from "./components/ItemStatusFilter"
 import ItemForm from "./components/ItemForm";
+
 import './style.css'
 
 export default class App extends Component {
@@ -74,6 +76,7 @@ export default class App extends Component {
     onSearchChange = (term) => {
         this.setState({term})
     };
+
     onFilterChange = (filter) => {
         this.setState({filter})
     };
@@ -108,25 +111,25 @@ export default class App extends Component {
         const todoCount = todoData.length - doneCount;
 
         return (
-            <div className="to-do">
-                <AppHeader toDo={doneCount} done={todoCount}/>
-                <div className="groop-search">
-                    <SearchPanel
-                        onSearchChange={this.onSearchChange}
+                <div className="to-do">
+                    <AppHeader toDo={doneCount} done={todoCount}/>
+                    <div className="groop-search">
+                        <SearchPanel
+                            onSearchChange={this.onSearchChange}
+                        />
+                        <ItemStatusFilter
+                            filter={filter}
+                            onFilterChange={this.onFilterChange}
+                        />
+                    </div>
+                    <TodoList
+                        todos={visibleItems}
+                        onDeleted={this.deleteItem}
+                        onToggleImportant={this.onToggleImportant}
+                        onToggleDone={this.onToggleDone}
                     />
-                    <ItemStatusFilter
-                        filter={filter}
-                        onFilterChange={this.onFilterChange}
-                    />
+                    <ItemForm onAdded={this.addedItem}/>
                 </div>
-                <TodoList
-                    todos={visibleItems}
-                    onDeleted={this.deleteItem}
-                    onToggleImportant={this.onToggleImportant}
-                    onToggleDone={this.onToggleDone}
-                />
-                <ItemForm onAdded={this.addedItem}/>
-            </div>
         );
     }
 };
